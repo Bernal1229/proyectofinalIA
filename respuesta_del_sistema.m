@@ -26,32 +26,32 @@ xlabel('Tiempo (s)');
 
 
 
-% % =========================
-% % Animación del péndulo
-% % =========================
-% 
-% l = 0.2;  % Longitud del péndulo (en metros)
-% 
-% figure;
-% for i = 1:10:length(theta)
-%     clf;
-% 
-%     % Coordenadas del extremo del péndulo
-%     x = l * sin(theta(i));
-%     y = l * cos(theta(i));
-% 
-%     % Dibujo del péndulo
-%     plot([0, x], [0, y], 'k-', 'LineWidth', 2);
-%     hold on;
-%     plot(x, y, 'ro', 'MarkerSize', 10, 'MarkerFaceColor', 'r');
-% 
-%     % Formato del gráfico
-%     axis equal;
-%     axis([-l l -l l]*1.2);
-%     grid on;
-%     title(sprintf('Pendulum Animation - t = %.2f s', t(i)));
-%     xlabel('x (m)');
-%     ylabel('y (m)');
-% 
-%     pause(0.01);
-% end
+% =========================
+% Animación del péndulo
+% =========================
+
+l = 0.2;  % Longitud del péndulo (en metros)
+
+figure;
+for i = 1:10:length(theta)
+    clf;
+
+    % Coordenadas del extremo del péndulo
+    x = l * sin(theta(i));
+    y = l * cos(theta(i));
+
+    % Dibujo del péndulo
+    plot([0, x], [0, y], 'k-', 'LineWidth', 2);
+    hold on;
+    plot(x, y, 'ro', 'MarkerSize', 10, 'MarkerFaceColor', 'r');
+
+    % Formato del gráfico
+    axis equal;
+    axis([-l l -l l]*1.2);
+    grid on;
+    title(sprintf('Pendulum Animation - t = %.2f s', t(i)));
+    xlabel('x (m)');
+    ylabel('y (m)');
+
+    pause(0.01);
+end
